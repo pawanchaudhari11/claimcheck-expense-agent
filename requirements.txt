@@ -1,0 +1,2 @@
+# No third-party packages are needed: the project uses only the Python 3.10+
+# standard library (the Groq API is called with urllib).

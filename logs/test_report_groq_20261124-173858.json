@@ -1,0 +1,112 @@
+[
+  {
+    "claim_id": "CLM-001",
+    "description": "Valid claim - every receipt complete, every limit respected",
+    "expected": "APPROVE",
+    "reference": "APPROVE",
+    "agent": "APPROVE",
+    "agent_total": 856.65,
+    "reference_total": 856.65,
+    "tools_called_in_order": [
+      "lookup_policy",
+      "lookup_policy",
+      "check_receipts",
+      "lookup_policy",
+      "calculate",
+      "lookup_policy",
+      "submit_recommendation"
+    ],
+    "checks": {
+      "submitted_recommendation": true,
+      "answer_key_matches_reference": true,
+      "decision_matches_answer_key": true,
+      "claim_total_matches_code": true,
+      "required_tools_called": true
+    },
+    "passed": true,
+    "log": "/Users/pawanchaudhari/Downloads/Northeastern University/CSYE 7374/Agentic AI mini project/logs/CLM-001_groq_20261124-173557.jsonl"
+  },
+  {
+    "claim_id": "CLM-002",
+    "description": "Meals on 2026-10-12 total $103.00 (> $75 daily limit) although each single receipt is under the limit",
+    "expected": "FLAG_FOR_REVIEW",
+    "reference": "FLAG_FOR_REVIEW",
+    "agent": "FLAG_FOR_REVIEW",
+    "agent_total": 714.3,
+    "reference_total": 714.3,
+    "tools_called_in_order": [
+      "lookup_policy",
+      "lookup_policy",
+      "lookup_policy",
+      "check_receipts",
+      "calculate",
+      "lookup_policy",
+      "calculate",
+      "submit_recommendation"
+    ],
+    "checks": {
+      "submitted_recommendation": true,
+      "answer_key_matches_reference": true,
+      "decision_matches_answer_key": true,
+      "claim_total_matches_code": true,
+      "required_tools_called": true,
+      "listed_violation": true
+    },
+    "passed": true,
+    "log": "/Users/pawanchaudhari/Downloads/Northeastern University/CSYE 7374/Agentic AI mini project/logs/CLM-002_groq_20261124-173601.jsonl"
+  },
+  {
+    "claim_id": "CLM-003",
+    "description": "Hotel receipt (item 2) has no date",
+    "expected": "NEEDS_INFO",
+    "reference": "NEEDS_INFO",
+    "agent": "NEEDS_INFO",
+    "agent_total": 506.2,
+    "reference_total": 506.2,
+    "tools_called_in_order": [
+      "lookup_policy",
+      "check_receipts",
+      "lookup_policy",
+      "lookup_policy",
+      "lookup_policy",
+      "ask_employee",
+      "calculate",
+      "submit_recommendation"
+    ],
+    "checks": {
+      "submitted_recommendation": true,
+      "answer_key_matches_reference": true,
+      "decision_matches_answer_key": true,
+      "claim_total_matches_code": true,
+      "required_tools_called": true,
+      "listed_missing_info": true
+    },
+    "passed": true,
+    "log": "/Users/pawanchaudhari/Downloads/Northeastern University/CSYE 7374/Agentic AI mini project/logs/CLM-003_groq_20261124-173733.jsonl"
+  },
+  {
+    "claim_id": "CLM-004",
+    "description": "Business-class airfare ($640, under the $800 limit) - non-economy airfare is non-reimbursable",
+    "expected": "REJECT",
+    "reference": "REJECT",
+    "agent": "REJECT",
+    "agent_total": 907.75,
+    "reference_total": 907.75,
+    "tools_called_in_order": [
+      "lookup_policy",
+      "calculate",
+      "check_receipts",
+      "submit_recommendation"
+    ],
+    "checks": {
+      "submitted_recommendation": true,
+      "answer_key_matches_reference": true,
+      "decision_matches_answer_key": true,
+      "claim_total_matches_code": true,
+      "required_tools_called": true,
+      "listed_violation": true
+    },
+    "passed": true,
+    "log": "/Users/pawanchaudhari/Downloads/Northeastern University/CSYE 7374/Agentic AI mini project/logs/CLM-004_groq_20261124-173823.jsonl"
+  }
+]

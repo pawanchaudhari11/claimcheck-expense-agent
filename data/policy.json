@@ -1,0 +1,36 @@
+{
+  "policy_name": "Acme Fictional Co. Travel & Expense Policy",
+  "version": "2026.1",
+  "currency": "USD",
+  "categories": {
+    "meals": {
+      "daily_limit": 75.00,
+      "limit_applies_to": "sum of all meal receipts on the same calendar date",
+      "alcohol_reimbursable": false
+    },
+    "lodging": {
+      "nightly_limit": 200.00,
+      "limit_applies_to": "each night's room charge"
+    },
+    "ground_transport": {
+      "per_trip_limit": 60.00,
+      "limit_applies_to": "each individual taxi / rideshare receipt"
+    },
+    "airfare": {
+      "per_trip_limit": 800.00,
+      "allowed_class": "economy",
+      "limit_applies_to": "each airfare receipt"
+    }
+  },
+  "receipts": {
+    "required_fields": ["date", "merchant", "amount", "category"],
+    "note": "Every line item must have a receipt containing all required fields."
+  },
+  "decision_rules": [
+    {"order": 1, "if": "any receipt is missing a required field", "then": "NEEDS_INFO", "note": "Ask the employee for the missing details. Never guess or invent values."},
+    {"order": 2, "if": "any expense is explicitly non-reimbursable (e.g. alcohol, non-economy airfare)", "then": "REJECT"},
+    {"order": 3, "if": "any category limit is exceeded", "then": "FLAG_FOR_REVIEW", "note": "Explain which limit was exceeded and by how much."},
+    {"order": 4, "if": "none of the above", "then": "APPROVE"}
+  ],
+  "disclaimer": "The agent only RECOMMENDS a decision. A human finance reviewer makes the actual approval."
+}

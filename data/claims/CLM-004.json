@@ -1,0 +1,13 @@
+{
+  "claim_id": "CLM-004",
+  "employee": "Alex Morgan (fictional)",
+  "purpose": "Partner meeting in Seattle",
+  "trip_start": "2026-11-02",
+  "trip_end": "2026-11-03",
+  "line_items": [
+    {"item_id": "1", "receipt": {"date": "2026-11-02", "merchant": "Alaska Airlines", "amount": 640.00, "category": "airfare", "class": "business"}},
+    {"item_id": "2", "receipt": {"date": "2026-11-02", "merchant": "Pike Street Hotel", "amount": 195.00, "category": "lodging"}},
+    {"item_id": "3", "receipt": {"date": "2026-11-02", "merchant": "Harbor Cafe", "amount": 31.50, "category": "meals"}},
+    {"item_id": "4", "receipt": {"date": "2026-11-03", "merchant": "Uber", "amount": 41.25, "category": "ground_transport"}}
+  ]
+}

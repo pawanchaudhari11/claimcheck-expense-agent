@@ -1,0 +1,40 @@
+{
+  "CLM-001": {
+    "description": "Valid claim - every receipt complete, every limit respected",
+    "expected_decision": "APPROVE",
+    "expected_claim_total": 856.65,
+    "required_tools": [
+      "lookup_policy",
+      "check_receipts",
+      "calculate"
+    ]
+  },
+  "CLM-002": {
+    "description": "Meals on 2026-10-12 total $103.00 (> $75 daily limit) although each single receipt is under the limit",
+    "expected_decision": "FLAG_FOR_REVIEW",
+    "expected_claim_total": 714.3,
+    "required_tools": [
+      "lookup_policy",
+      "check_receipts",
+      "calculate"
+    ]
+  },
+  "CLM-003": {
+    "description": "Hotel receipt (item 2) has no date",
+    "expected_decision": "NEEDS_INFO",
+    "expected_claim_total": 506.2,
+    "required_tools": [
+      "check_receipts"
+    ]
+  },
+  "CLM-004": {
+    "description": "Business-class airfare ($640, under the $800 limit) - non-economy airfare is non-reimbursable",
+    "expected_decision": "REJECT",
+    "expected_claim_total": 907.75,
+    "required_tools": [
+      "lookup_policy",
+      "check_receipts",
+      "calculate"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "claim_id": "CLM-003",
+  "employee": "Sam Rivera (fictional)",
+  "purpose": "Vendor site visit in Austin",
+  "trip_start": "2026-10-19",
+  "trip_end": "2026-10-20",
+  "line_items": [
+    {"item_id": "1", "receipt": {"date": "2026-10-19", "merchant": "Southwest", "amount": 289.00, "category": "airfare", "class": "economy"}},
+    {"item_id": "2", "receipt": {"merchant": "Congress Ave Hotel", "amount": 165.00, "category": "lodging"}},
+    {"item_id": "3", "receipt": {"date": "2026-10-19", "merchant": "Taco Stand", "amount": 22.40, "category": "meals"}},
+    {"item_id": "4", "receipt": {"date": "2026-10-20", "merchant": "Uber", "amount": 29.80, "category": "ground_transport"}}
+  ]
+}

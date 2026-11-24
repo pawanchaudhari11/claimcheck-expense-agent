@@ -1,0 +1,16 @@
+{
+  "claim_id": "CLM-001",
+  "employee": "Jordan Lee (fictional)",
+  "purpose": "Client workshop in New York",
+  "trip_start": "2026-10-05",
+  "trip_end": "2026-10-07",
+  "line_items": [
+    {"item_id": "1", "receipt": {"date": "2026-10-05", "merchant": "JetBlue", "amount": 318.40, "category": "airfare", "class": "economy"}},
+    {"item_id": "2", "receipt": {"date": "2026-10-05", "merchant": "Hotel Midtown", "amount": 189.00, "category": "lodging"}},
+    {"item_id": "3", "receipt": {"date": "2026-10-06", "merchant": "Hotel Midtown", "amount": 189.00, "category": "lodging"}},
+    {"item_id": "4", "receipt": {"date": "2026-10-05", "merchant": "Joe's Deli", "amount": 18.25, "category": "meals"}},
+    {"item_id": "5", "receipt": {"date": "2026-10-05", "merchant": "Bistro 44", "amount": 41.60, "category": "meals"}},
+    {"item_id": "6", "receipt": {"date": "2026-10-06", "merchant": "Cafe Lumen", "amount": 52.90, "category": "meals"}},
+    {"item_id": "7", "receipt": {"date": "2026-10-07", "merchant": "Yellow Cab", "amount": 47.50, "category": "ground_transport"}}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM-002",
+  "employee": "Priya Shah (fictional)",
+  "purpose": "Sales conference in Chicago",
+  "trip_start": "2026-10-12",
+  "trip_end": "2026-10-13",
+  "line_items": [
+    {"item_id": "1", "receipt": {"date": "2026-10-12", "merchant": "United Airlines", "amount": 402.10, "category": "airfare", "class": "economy"}},
+    {"item_id": "2", "receipt": {"date": "2026-10-12", "merchant": "Lakeside Inn", "amount": 176.00, "category": "lodging"}},
+    {"item_id": "3", "receipt": {"date": "2026-10-12", "merchant": "Morning Grind", "amount": 14.75, "category": "meals"}},
+    {"item_id": "4", "receipt": {"date": "2026-10-12", "merchant": "Harbor Grill", "amount": 48.30, "category": "meals"}},
+    {"item_id": "5", "receipt": {"date": "2026-10-12", "merchant": "Deep Dish Co.", "amount": 39.95, "category": "meals"}},
+    {"item_id": "6", "receipt": {"date": "2026-10-13", "merchant": "Lyft", "amount": 33.20, "category": "ground_transport"}}
+  ]
+}
